@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f0a55e-b2c3-489d-9182-fee2d63a005f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L5_Homework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/plant/Plant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/engeto/plant/PlantException.java" afterDir="false" />
+    <list default="true" id="95f0a55e-b2c3-489d-9182-fee2d63a005f" name="Changes" comment="přidání třídy pro Flower List">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/kvetiny.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/kvetiny.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/plant/FlowerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/plant/FlowerList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/plant/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/plant/Plant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +26,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;krtickamichael&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/krtickamichael/L5_Homework.git&quot;,
+    &quot;accountId&quot;: &quot;4192e654-05b0-4259-a2a5-56411da68fec&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -41,11 +52,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Krtek\IdeaProjects\L5_Homework\resources" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,6 +72,75 @@
       <option name="presentableId" value="Default" />
       <updated>1718980208191</updated>
     </task>
+    <task id="LOCAL-00001" summary="Založení projektu.">
+      <option name="closed" value="true" />
+      <created>1718999008739</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718999008739</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Vytvoření třídy Plant">
+      <option name="closed" value="true" />
+      <created>1718999033056</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718999033056</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Vytvoření třídy pro vyjímky">
+      <option name="closed" value="true" />
+      <created>1718999046257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718999046257</updated>
+    </task>
+    <task id="LOCAL-00004" summary="import souboru se vstupnímy daty.">
+      <option name="closed" value="true" />
+      <created>1718999069668</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718999069668</updated>
+    </task>
+    <task id="LOCAL-00005" summary="gitignore">
+      <option name="closed" value="true" />
+      <created>1718999110759</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718999110759</updated>
+    </task>
+    <task id="LOCAL-00006" summary="přidání třídy pro Flower List">
+      <option name="closed" value="true" />
+      <created>1719067638630</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719067638630</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Založení projektu." />
+    <MESSAGE value="Vytvoření třídy Plant" />
+    <MESSAGE value="Vytvoření třídy pro vyjímky" />
+    <MESSAGE value="import souboru se vstupnímy daty." />
+    <MESSAGE value="gitignore" />
+    <MESSAGE value="přidání třídy pro Flower List" />
+    <option name="LAST_COMMIT_MESSAGE" value="přidání třídy pro Flower List" />
   </component>
 </project>
