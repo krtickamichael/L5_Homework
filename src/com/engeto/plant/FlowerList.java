@@ -2,12 +2,10 @@ package com.engeto.plant;
 
 import java.io.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.util.List;
+
 
 public class FlowerList {
 
@@ -38,7 +36,6 @@ public class FlowerList {
     }
 
     public void readContentFromFile(String filename, String delimiter) throws PlantException {
-        FlowerList flowerList = new FlowerList();
         try (Scanner scanner = new Scanner(new BufferedReader(new FileReader(filename)))) {
             plants.clear();
             while (scanner.hasNextLine()) {
@@ -57,6 +54,18 @@ public class FlowerList {
             }
         } catch (FileNotFoundException e) {
             throw new PlantException("File " + filename + "not found:" + e.getMessage());
+        }
+    }
+
+    public void printContentToFile(String outPutFile) throws PlantException {
+        FlowerList flowerList1 = new FlowerList();
+        flowerList1.addPlants(plants);
+        try (PrintWriter outputWriter = new PrintWriter(new FileWriter(outPutFile))) {
+            for (Plant plant : flowerList1.plants) {
+                outputWriter.println(plant.exportData());
+            }
+        } catch (IOException e) {
+            throw new PlantException("Print to file error:" + e.getMessage());
         }
     }
 }

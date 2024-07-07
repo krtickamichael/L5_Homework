@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f0a55e-b2c3-489d-9182-fee2d63a005f" name="Changes" comment="přidání třídy pro Flower List">
+    <list default="true" id="95f0a55e-b2c3-489d-9182-fee2d63a005f" name="Changes" comment="čtení a zápis ze souboru">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/kvetiny.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/kvetiny.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/plant/FlowerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/plant/FlowerList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/plant/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/plant/Plant.java" afterDir="false" />
@@ -120,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719067638630</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="čtení a zápis ze souboru">
+      <option name="closed" value="true" />
+      <created>1719345701344</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719345701344</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +148,25 @@
     <MESSAGE value="import souboru se vstupnímy daty." />
     <MESSAGE value="gitignore" />
     <MESSAGE value="přidání třídy pro Flower List" />
-    <option name="LAST_COMMIT_MESSAGE" value="přidání třídy pro Flower List" />
+    <MESSAGE value="čtení a zápis ze souboru" />
+    <option name="LAST_COMMIT_MESSAGE" value="čtení a zápis ze souboru" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="flowerList.plants.get(0)" />
+        <watch expression="plants.get(3)" />
+        <watch expression="plants.get(3)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
