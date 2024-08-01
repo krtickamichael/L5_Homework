@@ -2,6 +2,7 @@ package com.engeto.plant;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -15,7 +16,7 @@ public class FlowerList {
           plants = new ArrayList<>();
     }
 
-    public List<Plant> getPlant() {
+    public List<Plant> getPlants() {
         return new ArrayList<>(plants);
     }
 
@@ -44,25 +45,30 @@ public class FlowerList {
                 if (parts.length != 5) {
                     throw new PlantException("Line format error: " + line + "incorrect number of items ");
                 }
-                String name = parts[0];
-                String notes = parts[1];
-                int wateringFrequency = Integer.parseInt(parts[2]);
-                LocalDate plantWatering = LocalDate.parse(parts[3]);
-                LocalDate planted = LocalDate.parse(parts[4]);
+                try {
+                    String name = parts[0];
+                    String notes = parts[1];
+                    int wateringFrequency = Integer.parseInt(parts[2]);
+                    LocalDate plantWatering = LocalDate.parse(parts[3]);
+                    LocalDate planted = LocalDate.parse(parts[4]);
 
-                plants.add(new Plant(name, notes, planted, plantWatering, wateringFrequency));
+                    plants.add(new Plant(name, notes, planted, plantWatering, wateringFrequency));
+                } catch (NumberFormatException e) {
+                    throw new PlantException("Number format error in line: " + line + " - " + e.getMessage());
+                } catch (DateTimeParseException e) {
+                    throw new PlantException("Date format error in line: " + line + " - " + e.getMessage());
+                }
             }
         } catch (FileNotFoundException e) {
-            throw new PlantException("File " + filename + "not found:" + e.getMessage());
+            throw new PlantException("File " + filename + " not found: " + e.getMessage());
         }
     }
 
-    public void printContentToFile(String outPutFile) throws PlantException {
-        FlowerList flowerList1 = new FlowerList();
-        flowerList1.addPlants(plants);
+    public void printContentToFile(String outPutFile, String delimiter) throws PlantException {
+
         try (PrintWriter outputWriter = new PrintWriter(new FileWriter(outPutFile))) {
-            for (Plant plant : flowerList1.plants) {
-                outputWriter.println(plant.exportData());
+            for (Plant plant : plants) {
+                outputWriter.println(plant.exportData(delimiter));
             }
         } catch (IOException e) {
             throw new PlantException("Print to file error:" + e.getMessage());

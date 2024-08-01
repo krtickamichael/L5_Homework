@@ -9,7 +9,7 @@ public class Plant implements Comparable<Plant> {
     private LocalDate plantWatering;
     private int wateringFrequency;
 
-    public Plant(String name, String notes, LocalDate planted, LocalDate plantWatering, int wateringFrequency) {
+    public Plant(String name, String notes, LocalDate planted, LocalDate plantWatering, int wateringFrequency) throws PlantException{
         this.name = name;
         this.notes = notes;
         this.planted = planted;
@@ -17,20 +17,12 @@ public class Plant implements Comparable<Plant> {
         this.wateringFrequency = wateringFrequency;
     }
 
-    public Plant(String name, LocalDate planted, int wateringFrequency) {
-        this.name = name;
-        this.notes = null;
-        this.planted = planted;
-        this.plantWatering = LocalDate.now();
-        this.wateringFrequency = wateringFrequency;
+    public Plant(String name, LocalDate planted, int wateringFrequency) throws PlantException{
+        this(name, null, planted, LocalDate.now(), wateringFrequency);
     }
 
-    public Plant(String name) {
-        this.name = name;
-        this.notes = " ";
-        this.planted = LocalDate.now();
-        this.plantWatering = LocalDate.now();
-        this.wateringFrequency = 7;
+    public Plant(String name) throws PlantException{
+        this(name, " ", LocalDate.now(), LocalDate.now(), 7);
     }
 
     public void setPlantWatering() throws PlantException {
@@ -57,8 +49,8 @@ public class Plant implements Comparable<Plant> {
         return "name: " + name + " note: " + notes + " planted: " + planted + " plantWatering: " + plantWatering + " wateringFrequency: " + wateringFrequency;
     }
 
-    public String exportData() {
-        return name + "\t" + notes + "\t" + wateringFrequency + "\t" + planted + "\t" + plantWatering;
+    public String exportData(String delimiter) {
+        return name + delimiter + notes + delimiter + wateringFrequency + delimiter + planted + delimiter + plantWatering;
     }
 
     @Override

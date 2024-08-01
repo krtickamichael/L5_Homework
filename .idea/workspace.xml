@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f0a55e-b2c3-489d-9182-fee2d63a005f" name="Changes" comment="čtení a zápis ze souboru">
+    <list default="true" id="95f0a55e-b2c3-489d-9182-fee2d63a005f" name="Changes" comment="Dodělání Collection.sort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/plant/FlowerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/plant/FlowerList.java" afterDir="false" />
@@ -54,7 +54,8 @@
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Krtek/Desktop/ukol08&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -127,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719345701344</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Dodělání Collection.sort">
+      <option name="closed" value="true" />
+      <created>1720353578326</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720353578326</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,18 +158,10 @@
     <MESSAGE value="gitignore" />
     <MESSAGE value="přidání třídy pro Flower List" />
     <MESSAGE value="čtení a zápis ze souboru" />
-    <option name="LAST_COMMIT_MESSAGE" value="čtení a zápis ze souboru" />
+    <MESSAGE value="Dodělání Collection.sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodělání Collection.sort" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="flowerList.plants.get(0)" />

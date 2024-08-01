@@ -14,26 +14,25 @@ public class Main {
 
         FlowerList flowerList = new FlowerList();
 
-        ListOfValues(flowerList);
+        listOfValues(flowerList);
         System.out.println(" ");
         System.out.println("Sorted by watering info:");
         getWateringInfo(flowerList);
         System.out.println(" ");
 
-        AddPlant(flowerList);
+        addPlant(flowerList);
 
 
         printToFile(flowerList, "resources/outPutFile.txt");
         readFromFile(flowerList, "resources/outPutFile.txt");
         getInfo(flowerList);
-        Collections.sort(flowerList.getPlant());
+        Collections.sort(flowerList.getPlants());
         System.out.println(" ");
         System.out.println("Extract and load from file:");
         getInfo(flowerList);
 
 
-        List<Plant> plants = new ArrayList<>();
-        plants.addAll(flowerList.getPlant());
+        List<Plant> plants = flowerList.getPlants();
         Collections.sort(plants);
         System.out.println(" ");
         System.out.println("Sorted by name:");
@@ -43,7 +42,7 @@ public class Main {
         System.out.println(" ");
 
         List<Plant> plants2 = new ArrayList<>();
-        plants2.addAll(flowerList.getPlant());
+        plants2.addAll(flowerList.getPlants());
         Collections.sort(plants2, Comparator.comparing(Plant::getPlantWatering));
         System.out.println("Seřazeno podle datumu poslední zálivky:");
         for (Plant plant : plants2) {
@@ -51,16 +50,24 @@ public class Main {
         }
     }
 
-    private static void AddPlant(FlowerList flowerList) {
+    private static void addPlant(FlowerList flowerList) {
         System.out.println("Add and delete plants:");
-        flowerList.addPlant(new Plant("Růže", "červená", LocalDate.of(2024, 1, 1),
-                LocalDate.of(2024, 1, 5), 4));
-        flowerList.addPlant(new Plant("Tulipán", "modrý", LocalDate.of(2024, 5, 1),
-                LocalDate.of(2024, 5, 5), 9));
+        try {
+            flowerList.addPlant(new Plant("Růže", "červená", LocalDate.of(2024, 1, 1),
+                    LocalDate.of(2024, 1, 5), 4));
+        } catch (PlantException e) {
+            System.err.println("Error add plant:" + e.getMessage());
+        }
+        try {
+            flowerList.addPlant(new Plant("Tulipán", "modrý", LocalDate.of(2024, 5, 1),
+                    LocalDate.of(2024, 5, 5), 9));
+        } catch (PlantException e) {
+            System.err.println("Error add plant:" + e.getMessage());
+        }
         flowerList.removePlant(2);
     }
 
-    private static void ListOfValues(FlowerList flowerList) {
+    private static void listOfValues(FlowerList flowerList) {
         System.out.println(" ");
         readFromFile(flowerList,"resources/kvetiny.txt");
         System.out.println("listing the values of the loaded file:");
@@ -68,20 +75,20 @@ public class Main {
     }
 
     private static void getWateringInfo(FlowerList flowerList) {
-        for (Plant plant : flowerList.getPlant()) {
+        for (Plant plant : flowerList.getPlants()) {
             System.out.println(plant.getWateringInfo());
         }
     }
 
     private static void getInfo(FlowerList flowerList) {
-        for (Plant plant : flowerList.getPlant()) {
+        for (Plant plant : flowerList.getPlants()) {
             System.out.println(plant.getInfo());
         }
     }
 
     private static void printToFile(FlowerList flowerList, String outPutFile) {
         try {
-        flowerList.printContentToFile(outPutFile);
+        flowerList.printContentToFile(outPutFile,"\t");
         } catch (PlantException e){
             System.err.println("Error printing content:" + e.getMessage());
         }
